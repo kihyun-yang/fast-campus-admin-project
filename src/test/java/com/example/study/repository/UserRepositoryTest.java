@@ -34,16 +34,16 @@ public class UserRepositoryTest extends StudyApplicationTests {
     @Transactional
     @Test
     public void read() {
-        Optional<User> user = userRepository.findByAccount("TestUser01");
-
-        user.ifPresent(selectUser -> {
-
-            selectUser.getOrderDetailList().forEach(detail -> {
-                Item item = detail.getItem();
-                System.out.println(item);
-            });
-
-        });
+//        Optional<User> user = userRepository.findByAccount("TestUser01");
+//
+//        user.ifPresent(selectUser -> {
+//
+//            selectUser.getOrderDetailList().forEach(detail -> {
+//                Item item = detail.getItem();
+//                System.out.println(item);
+//            });
+//
+//        });
     }
 
     @Transactional
