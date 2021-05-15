@@ -23,6 +23,7 @@ public class Item {
 
     private String content;
 
+    // LAZY = 지연로딩, EAGER = 즉시로딩 (1:1관계에서는 EAGER, 1:다 관계에서는 LAZY를 쓰는것이 일반적)
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "item")
     private List<OrderDetail> orderDetailList;
 

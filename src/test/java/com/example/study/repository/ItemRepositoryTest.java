@@ -4,6 +4,7 @@ import com.example.study.StudyApplicationTests;
 import com.example.study.model.entity.Item;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -27,6 +28,7 @@ public class ItemRepositoryTest extends StudyApplicationTests {
         assertNotNull(newItem);
     }
 
+    @Transactional
     @Test
     public void read() {
         Long id = 1L;
