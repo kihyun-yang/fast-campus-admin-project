@@ -23,6 +23,8 @@ public class UserApiResponse {
 
     private String phoneNumber;
 
+    private String status;
+
     private LocalDateTime registeredAt;
 
     private LocalDateTime unRegisteredAt;
