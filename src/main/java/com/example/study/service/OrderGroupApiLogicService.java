@@ -6,9 +6,11 @@ import com.example.study.model.network.request.OrderGroupApiRequest;
 import com.example.study.model.network.response.OrderGroupApiResponse;
 import com.example.study.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class OrderGroupApiLogicService extends BaseService<OrderGroupApiRequest, OrderGroupApiResponse, OrderGroup> {
@@ -81,6 +83,11 @@ public class OrderGroupApiLogicService extends BaseService<OrderGroupApiRequest,
                     return Header.OK();
                 })
                 .orElseGet(() -> Header.ERROR("데이터 없음"));
+    }
+
+    @Override
+    public Header<List<OrderGroupApiResponse>> search(Pageable pageable) {
+        return null;
     }
 
     private Header<OrderGroupApiResponse> response(OrderGroup orderGroup) {
