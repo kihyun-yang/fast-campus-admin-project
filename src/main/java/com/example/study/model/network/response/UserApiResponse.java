@@ -1,5 +1,6 @@
 package com.example.study.model.network.response;
 
+import com.example.study.model.enumclass.UserStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,7 +24,7 @@ public class UserApiResponse {
 
     private String phoneNumber;
 
-    private String status;
+    private UserStatus status;
 
     private LocalDateTime registeredAt;
 
